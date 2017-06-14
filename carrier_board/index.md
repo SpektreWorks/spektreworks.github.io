@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Copter Carrier Board
+title: Multirotor Carrier Board
 order: 0
-permalink: /carrier_board
+permalink: /carrier_board/
 nav:
 - Introduction: introduction
 - - Features At-A-Glance: features-at-a-glance
@@ -89,3 +89,5 @@ Additionally, the six “Aux Out” connections are available as part of a 3x8 g
 <p align="center">
     <img src="/assets/images/JP2Bridge.png" class="img-responsive" style="max-width:800px"  />
 </p>
+
+# Digital and Analog Connectors
