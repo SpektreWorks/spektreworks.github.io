@@ -379,7 +379,7 @@ The carrier board has two indicator lights on the top surface labeled “Pwr” 
 **Err Light:** If one of the two regulators has failed, this light will shine red. **Do not fly if this light is red.**
 
 <p align="center">
-    <img src="/assets/images/light_truth_table.png" class="img-responsive" style="max-width:800px"  />
+    <img src="/assets/images/light_truth_table.PNG" class="img-responsive" style="max-width:800px"  />
 </p>
 
 # Buzzer and Volume Control 
