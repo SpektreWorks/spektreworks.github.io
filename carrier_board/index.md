@@ -7,6 +7,24 @@ nav:
 - Introduction: introduction
 - - Features At-A-Glance: features-at-a-glance
 - Power: power
+- - General Use Power Connectors: general-use-power-connectors
+- - ESC Connections: esc-connections
+- - Aux Pins: aux-pins
+- Digital and Analog Connectors: digital-and-analog-connectors
+- - Telemetry 1: telemetry-1
+- - Telemetry 2: telemetry-2
+- - GPS1: gps2-ser3i2c1
+- - GPS2: gps2-ser4i2c2
+- - I2C1: i2c1
+- - I2C2: i2c2
+- - CAN1: can1
+- - CAN2: can2
+- - SPI: spi
+- - ADC: adc
+- - BATT2 Sense: batt2-sense
+- - Debug: debug
+- Indicator Lights: indicator-lights
+
 ---
 
 <p align="center">
@@ -91,3 +109,206 @@ Additionally, the six “Aux Out” connections are available as part of a 3x8 g
 </p>
 
 # Digital and Analog Connectors
+The SpektreWorks carrier board comes with all of the same JST-brand receptacles as the standard ProfiCNC carrier board with a few exceptions. The tables below describe the pin-out of each JST connector.
+
+#### Telemetry 1
+
+|    Name    |    Label    |    Pins               |
+|------------|-------------|-----------------------|
+|    TLM1    |    J4       |    1. 5V              |
+|            |             |    2. Serial 1 TX     |
+|            |             |    3. Serial 1 RX     |
+|            |             |    4. Serial 1 CTS    |
+|            |             |    5. Serial 1 RTS    |
+|            |             |    6. GND             |
+
+#### Telemetry 2
+
+|    Name    |    Label    |    Pins               |
+|------------|-------------|-----------------------|
+|    TLM2    |    J8       |    1. 5V              |
+|            |             |    2. Serial 2 TX     |
+|            |             |    3. Serial 2 RX     |
+|            |             |    4. Serial 2 CTS    |
+|            |             |    5. Serial 2 RTS    |
+|            |             |    6. GND             |
+
+#### GPS2 (SER3/I2C1)
+
+|        Name        |    Label    |    Pins                |
+|--------------------|-------------|------------------------|
+|    SER3/I2C1       |    J2       |    1. 5V               |
+|                    |             |    1. 5V               |
+|                    |             |    2. Serial 3 TX      |
+|                    |             |    3. Serial 3 RX      |
+|                    |             |    4. SCL1             |
+|                    |             |    5. SDA1             |
+|                    |             |    6. Safety Button    |
+|                    |             |    7. Safety LED       |
+|                    |             |    8. GND              |
+
+#### GPS2 (SER4/I2C2)
+
+|    Name            |    Label    |    Pins              |
+|--------------------|-------------|----------------------|
+|    SER4/   I2C2    |    J18      |    1. 5V             |
+|                    |             |    2. Serial 4 TX    |
+|                    |             |    3. Serial 4 RX    |
+|                    |             |    4. SCL2           |
+|                    |             |    5. SDA2           |
+|                    |             |    6. GND            |
+
+#### I2C1
+
+|    Name    |    Label    |    Pins       |
+|------------|-------------|---------------|
+|    I2C1    |    J3       |    1. 5V      |
+|            |             |    2. SCL1    |
+|            |             |    3. SDA1    |
+|            |             |    4. GND     |
+
+#### I2C2
+
+|    Name    |    Label    |    Pins       |
+|------------|-------------|---------------|
+|    I2C2    |    J7       |    1. 5V      |
+|            |    J15      |    2. SCL1    |
+|            |             |    3. SDA1    |
+|            |             |    4. GND     |
+
+#### CAN1
+
+|    Name    |    Label    |    Pins       |
+|------------|-------------|---------------|
+|    CAN1    |    J16      |    1. 5V      |
+|            |             |    2. CAN1_H  |
+|            |             |    3. CAN1_L  |
+|            |             |    4. GND     |
+
+#### CAN2
+
+|    Name    |    Label    |    Pins       |
+|------------|-------------|---------------|
+|    CAN2    |    J6       |    1. 5V      |
+|            |             |    2. CAN2_H  |
+|            |             |    3. CAN2_L  |
+|            |             |    4. GND     |
+
+#### SPI
+
+|    Name    |    Label    |    Pins       |
+|------------|-------------|---------------|
+|    SPI     |    J5       |    1. 5V      |
+|            |             |    2. SCK     |
+|            |             |    3. MISO    |
+|            |             |    4. MOSI    |
+|            |             |    5. ~NSS    |
+|            |             |    6. DRDY    |
+|            |             |    7. GND     |
+
+Note: The SPI port will likely be removed in future versions of this carrier board.
+
+#### ADC
+
+|    Name    |    Label    |    Pins       |
+|------------|-------------|---------------|
+|    ADC     |    J13      |    1. 5V      |
+|            |             |    2. ADC_IN  |
+|            |             |    3. NC      |
+|            |             |    4. GND     |
+
+The ADC_IN input voltage is divided by two using a symmetric 10kΩ voltage divider on the board. Do not exceed analog voltages above 6.6V on this pin.
+
+#### BATT2 Sense 
+
+|    Name     |    Label    |    Pins                   |
+|------------ |-------------|---------------------------|
+| BATT2 SENSE |    J17      |    1. 5V                  |
+|             |             |    2. BATT2_Volt_Sense    |
+|             |             |    3. BATT2_Current_Sense |
+|             |             |    4. GND                 |
+
+In order to use the BATT2_Volt_Sense pin, a user-selected resistor must be soldered to the board. Use the following equation to select the resistor value:
+
+<center>
+	<a href="https://www.codecogs.com/eqnedit.php?latex=R&space;=&space;3030&space;*&space;V_{max}-10000" target="_blank"><img src="https://latex.codecogs.com/gif.latex?R&space;=&space;3030&space;*&space;V_{max}-10000" title="R = 3030 * V_{max}-10000" /></a>
+</center>
+
+
+Where Vmax is the maximum voltage expected on this pin. R will be the resistance in Ohms. Once this value is calculated, a common through hole style resistor should soldered to the space labeled R46 on the bottom surface of the board.
+
+<p align="center">
+    <img src="/assets/images/ADCResistor.png" class="img-responsive" style="max-width:800px"  />
+</p>
+
+In order for the Pixhawk Cube to accurately read the secondary voltage, the BATT2_VOLT_MULT parameter must be set. It can be calculated using the following equation:
+
+<center>
+	<a href="https://www.codecogs.com/eqnedit.php?latex=BATT2\_VOLT\_MULT=\frac{V_{max}}{3.3}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?BATT2\_VOLT\_MULT=\frac{V_{max}}{3.3}" title="BATT2\_VOLT\_MULT=\frac{V_{max}}{3.3}" /></a>
+</center>
+
+
+#### Debug
+
+Two Debug connectors are provided for developer use. One debug header is provided for each process on the Pixhawk 2.1 Cube.
+
+Connector is JST brand and mates with SHR-06V-S-B or SHR-06V-S
+
+|    Name      |    Label    |    Pins              |
+|--------------|-------------|----------------------|
+| SER5/FMU DBG |    J5       |    1. 3.3V           |
+|              |             |    2. Serial 5 TX    |
+|              |             |    3. Serial 5 RX    |
+|              |             |    4. FMU-SWDIO      |
+|              |             |    5. FMU-SWCLK      |
+|              |             |    6. GND            |
+
+|    Name      |    Label    |    Pins                   |
+|--------------|-------------|---------------------------|
+| IO DBG       |    J21      |    1. 3.3V                |
+|              |             |    2. IO-SERIAL1_TX       |
+|              |             |    3. DSM/IO-SERIAL1_RX   |
+|              |             |    4. IO-SWDIO            |
+|              |             |    5. IO-SWCLK            |
+|              |             |    6. GND                 |
+
+# Indicator Lights
+
+The carrier board has two indicator lights on the top surface labeled “Pwr” and “Err”.
+
+**Pwr Light:** There are two independent 5V regulators that provide power to the autopilot and other peripherals. This light will shine blue if and only if both regulators are working. **Do not fly if this light is not blue.**
+
+**Err Light:** If one of the two regulators has failed, this light will shine red. **Do not fly if this light is red.**
+
+<p align="center">
+    <img src="/assets/images/light_truth_table.png" class="img-responsive" style="max-width:800px"  />
+</p>
+
+# Buzzer and Volume Control 
+
+The carrier board comes with a piezoelectric buzzer mounted on the underside of the board. No external buzzer is required. For safety reasons, do not mount the board on your vehicle in a manner that causes the buzzer to be muffled.
+
+The carrier board features a volume control switch located at the front edge of the board. When the switch is pushed to the right, the buzzer will be at full, ear-splitting volume. When pushed to the left, the volume is reduced. For safety reasons, never fly with the switch at the lower volume.
+
+
+# Mechanical Information
+
+#### Outer Dimensions
+<p align="center">
+    <img src="/assets/images/carrier_board_dimensions.png" class="img-responsive" style="max-width:800px"  />
+</p>
+
+#### Mounting Hole Locations
+
+<p align="center">
+    <img src="/assets/images/carrier_board_holes.png" class="img-responsive" style="max-width:800px"  />
+</p>
+
+# Errata
+Version 1.3 of the SpektreWorks Carrier Board has a trim potentiometer labeled R14 with a large “VADJ” printed next to it. This trim pot was originally intended to adjust the voltage of the regulator. However, it is not recommended that the voltage be adjusted on this version of the board. 
+
+The Connector J19 is labeled on the board as “VPLD 12-24V”. Instead, this should read “VPLD 12V”.
+
+# Disclaimer
+
+Due to the complex nature of any drone vehicle, there are many causes of failure that may result in damaged components. SpektreWorks cannot warranty the carrier board against damage caused by external devices (ESCs, motors, peripherals, etc.) or due to a crash. SpektreWorks will replace a carrier board that has a manufacturer defect within 30 days of purchase.
