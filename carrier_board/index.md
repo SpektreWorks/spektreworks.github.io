@@ -10,6 +10,7 @@ nav:
 - - General Use Power Connectors: general-use-power-connectors
 - - ESC Connections: esc-connections
 - - Aux Pins: aux-pins
+- Motor Pins Assignments: motor-pin-assignments
 - Digital and Analog Connectors: digital-and-analog-connectors
 - - Telemetry 1: telemetry-1
 - - Telemetry 2: telemetry-2
@@ -24,6 +25,12 @@ nav:
 - - BATT2 Sense: batt2-sense
 - - Debug: debug
 - Indicator Lights: indicator-lights
+- Buzzer and Volume Control: buzzer-and-volume-control
+- Mechanical Information: Mechanical Information
+- - Outer Dimensions: outer-dimensions
+- - Mounting Hole Locations: mounting-hole-locations
+- Errata: errata
+- Disclaimer: disclaimer
 
 ---
 
@@ -34,7 +41,7 @@ nav:
 # Introduction
 The primary purpose of the SpektreWorks Multi-Rotor Carrier Board for the Pixhawk Cube is to reduce the rat’s nest of wires and modules typically associated with a multi-rotor assembly. It provides built-in power distribution, redundant power supplies for the autopilot, built-in fail-over power selection, a separate payload power regulator, and many other features.
 
-While this carrier board is geometrically optimized for quadcopters and octocopters, it provides connections for every function of the Pixhawk autopilot. Therefore, this board can be integrated into any vehicle type that is supported by the Pixhawk Cube.
+While this carrier board is geometrically optimized for quadcopters, X8 configurations, and octocopters, it provides connections for every function of the Pixhawk autopilot. Therefore, this board can be integrated into any vehicle type that is supported by the Pixhawk Cube, including all other multi-rotor frame types, plane, rover, sub, and antenna tracker.
  
 ## Features At-A-Glance
 - Up to 12-cell Lithium battery (50.4V)
@@ -107,6 +114,13 @@ Additionally, the six “Aux Out” connections are available as part of a 3x8 g
 <p align="center">
     <img src="/assets/images/JP2Bridge.png" class="img-responsive" style="max-width:800px"  />
 </p>
+
+# Motor Pin Assignments
+The default Motor PWM pin arrangement of the carrier board was chosen for easy integration with a standard quadcopter or X8 copter. For other vehicle or frame types, it is necessary to re-map the motor outputs to the correct corners of the board. This is possible for ArduCopter Firmware v3.5.0+.
+
+
+
+The following procedure may be used to 
 
 # Digital and Analog Connectors
 The SpektreWorks carrier board comes with all of the same JST-brand receptacles as the standard ProfiCNC carrier board with a few exceptions. The tables below describe the pin-out of each JST connector.

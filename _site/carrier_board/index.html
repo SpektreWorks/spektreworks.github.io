@@ -217,6 +217,18 @@
             
           <li>
             
+            <a  href="#motor-pin-assignments">Motor Pins Assignments</a>
+            
+
+            
+            
+            
+            
+            
+            
+            
+          <li>
+            
             <a  href="#digital-and-analog-connectors">Digital and Analog Connectors</a>
             
 
@@ -439,6 +451,88 @@
             
             
             
+            
+            
+            
+            
+          <li>
+            
+            <a  href="#buzzer-and-volume-control">Buzzer and Volume Control</a>
+            
+
+            
+            
+            
+            
+            
+            
+            
+          <li>
+            
+            <a  href="#Mechanical Information">Mechanical Information</a>
+            
+
+            
+            
+            
+            
+            
+            
+
+            
+            <ul class="nav nav-stacked">
+              
+              
+              <li>
+                <a  href="#outer-dimensions">Outer Dimensions</a>
+              </li>
+              
+              
+            </ul>
+            
+            
+            
+            
+            
+            
+
+            
+            <ul class="nav nav-stacked">
+              
+              
+              <li>
+                <a  href="#mounting-hole-locations">Mounting Hole Locations</a>
+              </li>
+              
+              
+            </ul>
+            
+            
+            
+            
+            
+            
+            
+          <li>
+            
+            <a  href="#errata">Errata</a>
+            
+
+            
+            
+            
+            
+            
+            
+            
+          <li>
+            
+            <a  href="#disclaimer">Disclaimer</a>
+            
+
+            
+            
+            
 
             <br /><br />
 
@@ -467,7 +561,7 @@
 <h1 id="introduction">Introduction</h1>
 <p>The primary purpose of the SpektreWorks Multi-Rotor Carrier Board for the Pixhawk Cube is to reduce the rat’s nest of wires and modules typically associated with a multi-rotor assembly. It provides built-in power distribution, redundant power supplies for the autopilot, built-in fail-over power selection, a separate payload power regulator, and many other features.</p>
 
-<p>While this carrier board is geometrically optimized for quadcopters and octocopters, it provides connections for every function of the Pixhawk autopilot. Therefore, this board can be integrated into any vehicle type that is supported by the Pixhawk Cube.
+<p>While this carrier board is geometrically optimized for quadcopters, X8 configurations, and octocopters, it provides connections for every function of the Pixhawk autopilot. Therefore, this board can be integrated into any vehicle type that is supported by the Pixhawk Cube, including all other multi-rotor frame types, plane, rover, sub, and antenna tracker.
  </p>
 <h2 id="features-at-a-glance">Features At-A-Glance</h2>
 <ul>
@@ -594,6 +688,11 @@
 <p align="center">
     <img src="/assets/images/JP2Bridge.png" class="img-responsive" style="max-width:800px" />
 </p>
+
+<h1 id="motor-pin-assignments">Motor Pin Assignments</h1>
+<p>The default Motor PWM pin arrangement of the carrier board was chosen for easy integration with a standard quadcopter or X8 copter. For other vehicle or frame types, it is necessary to re-map the motor outputs to the correct corners of the board. This is possible for ArduCopter Firmware v3.5.0+.</p>
+
+<p>The following procedure may be used to</p>
 
 <h1 id="digital-and-analog-connectors">Digital and Analog Connectors</h1>
 <p>The SpektreWorks carrier board comes with all of the same JST-brand receptacles as the standard ProfiCNC carrier board with a few exceptions. The tables below describe the pin-out of each JST connector.</p>

@@ -26,5 +26,5 @@ markdown and would like to contribute changes yourself, feel free to [open a PR]
 
 ## Products
 
-[Multirotor Carrier Board](/carrier_board)
+[Multirotor Carrier Board](/carrier_board/)
 
