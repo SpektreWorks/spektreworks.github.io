@@ -26,7 +26,7 @@ nav:
 - - Debug: debug
 - Indicator Lights: indicator-lights
 - Buzzer and Volume Control: buzzer-and-volume-control
-- Mechanical Information: Mechanical Information
+- Mechanical Information: mechanical-information
 - - Outer Dimensions: outer-dimensions
 - - Mounting Hole Locations: mounting-hole-locations
 - Errata: errata
