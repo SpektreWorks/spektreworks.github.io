@@ -143,7 +143,7 @@ Any motor number can be re-mapped to any output. This is done by setting the SER
 
 For example, if I wanted to plug Motor 3 into the MAIN5 connector on the board, I would set the SERVO5_FUNCTION parameter to 35.
 
-#### Hex Setup
+### Hex Setup
 
 The following procedure may be used to configure the board for a hexacopter:
 1. Flash the cube with ArduCopter 3.5.0 or later. 
@@ -171,7 +171,7 @@ The following procedure may be used to configure the board for a hexacopter:
 	| 5 | MAIN1 |
 	| 6 | MAIN2 |
 
-#### Octo Setup
+### Octo Setup
 
 The following procedure may be used to configure the board for a flat octocopter (not necessary for an X8):
 1. Flash the cube with ArduCopter 3.5.0 or later. 
@@ -209,7 +209,7 @@ The following procedure may be used to configure the board for a flat octocopter
 # Digital and Analog Connectors
 The SpektreWorks carrier board comes with all of the same JST-brand receptacles as the standard ProfiCNC carrier board with a few exceptions. The tables below describe the pin-out of each JST connector.
 
-#### Telemetry 1
+### Telemetry 1
 
 |    Name    |    Label    |    Pins               |
 |------------|-------------|-----------------------|
@@ -220,7 +220,7 @@ The SpektreWorks carrier board comes with all of the same JST-brand receptacles 
 |            |             |    5. Serial 1 RTS    |
 |            |             |    6. GND             |
 
-#### Telemetry 2
+### Telemetry 2
 
 |    Name    |    Label    |    Pins               |
 |------------|-------------|-----------------------|
@@ -231,7 +231,7 @@ The SpektreWorks carrier board comes with all of the same JST-brand receptacles 
 |            |             |    5. Serial 2 RTS    |
 |            |             |    6. GND             |
 
-#### GPS2 (SER3/I2C1)
+### GPS2 (SER3/I2C1)
 
 |        Name        |    Label    |    Pins                |
 |--------------------|-------------|------------------------|
@@ -245,7 +245,7 @@ The SpektreWorks carrier board comes with all of the same JST-brand receptacles 
 |                    |             |    7. Safety LED       |
 |                    |             |    8. GND              |
 
-#### GPS2 (SER4/I2C2)
+### GPS2 (SER4/I2C2)
 
 |    Name            |    Label    |    Pins              |
 |--------------------|-------------|----------------------|
@@ -256,7 +256,7 @@ The SpektreWorks carrier board comes with all of the same JST-brand receptacles 
 |                    |             |    5. SDA2           |
 |                    |             |    6. GND            |
 
-#### I2C1
+### I2C1
 
 |    Name    |    Label    |    Pins       |
 |------------|-------------|---------------|
@@ -265,7 +265,7 @@ The SpektreWorks carrier board comes with all of the same JST-brand receptacles 
 |            |             |    3. SDA1    |
 |            |             |    4. GND     |
 
-#### I2C2
+### I2C2
 
 |    Name    |    Label    |    Pins       |
 |------------|-------------|---------------|
@@ -274,7 +274,7 @@ The SpektreWorks carrier board comes with all of the same JST-brand receptacles 
 |            |             |    3. SDA1    |
 |            |             |    4. GND     |
 
-#### CAN1
+### CAN1
 
 |    Name    |    Label    |    Pins       |
 |------------|-------------|---------------|
@@ -283,7 +283,7 @@ The SpektreWorks carrier board comes with all of the same JST-brand receptacles 
 |            |             |    3. CAN1_L  |
 |            |             |    4. GND     |
 
-#### CAN2
+### CAN2
 
 |    Name    |    Label    |    Pins       |
 |------------|-------------|---------------|
@@ -292,7 +292,7 @@ The SpektreWorks carrier board comes with all of the same JST-brand receptacles 
 |            |             |    3. CAN2_L  |
 |            |             |    4. GND     |
 
-#### SPI
+### SPI
 
 |    Name    |    Label    |    Pins       |
 |------------|-------------|---------------|
@@ -306,7 +306,7 @@ The SpektreWorks carrier board comes with all of the same JST-brand receptacles 
 
 Note: The SPI port will likely be removed in future versions of this carrier board.
 
-#### ADC
+### ADC
 
 |    Name    |    Label    |    Pins       |
 |------------|-------------|---------------|
@@ -317,7 +317,7 @@ Note: The SPI port will likely be removed in future versions of this carrier boa
 
 The ADC_IN input voltage is divided by two using a symmetric 10kΩ voltage divider on the board. Do not exceed analog voltages above 6.6V on this pin.
 
-#### BATT2 Sense 
+### BATT2 Sense 
 
 |    Name     |    Label    |    Pins                   |
 |------------ |-------------|---------------------------|
@@ -346,7 +346,7 @@ In order for the Pixhawk Cube to accurately read the secondary voltage, the BATT
 </center>
 
 
-#### Debug
+### Debug
 
 Two Debug connectors are provided for developer use. One debug header is provided for each process on the Pixhawk 2.1 Cube.
 
@@ -391,12 +391,12 @@ The carrier board features a volume control switch located at the front edge of 
 
 # Mechanical Information
 
-#### Outer Dimensions
+### Outer Dimensions
 <p align="center">
     <img src="/assets/images/carrier_board_dimensions.png" class="img-responsive" style="max-width:800px"  />
 </p>
 
-#### Mounting Hole Locations
+### Mounting Hole Locations
 
 <p align="center">
     <img src="/assets/images/carrier_board_holes.png" class="img-responsive" style="max-width:800px"  />
