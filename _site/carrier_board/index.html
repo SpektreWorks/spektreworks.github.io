@@ -226,6 +226,40 @@
             
             
             
+
+            
+            <ul class="nav nav-stacked">
+              
+              
+              <li>
+                <a  href="#hex-setup">Hex Setup</a>
+              </li>
+              
+              
+            </ul>
+            
+            
+            
+            
+            
+            
+
+            
+            <ul class="nav nav-stacked">
+              
+              
+              <li>
+                <a  href="#octo-setup">Octo Setup</a>
+              </li>
+              
+              
+            </ul>
+            
+            
+            
+            
+            
+            
             
           <li>
             
@@ -469,7 +503,7 @@
             
           <li>
             
-            <a  href="#Mechanical Information">Mechanical Information</a>
+            <a  href="#mechanical-information">Mechanical Information</a>
             
 
             
@@ -692,7 +726,204 @@
 <h1 id="motor-pin-assignments">Motor Pin Assignments</h1>
 <p>The default Motor PWM pin arrangement of the carrier board was chosen for easy integration with a standard quadcopter or X8 copter. For other vehicle or frame types, it is necessary to re-map the motor outputs to the correct corners of the board. This is possible for ArduCopter Firmware v3.5.0+.</p>
 
-<p>The following procedure may be used to</p>
+<p>When re-mapping PWM outputs with Ardupilot, it is important to distinguish the <strong>motor number</strong> from the <strong>output number</strong>. The <strong>motor number</strong> refers to the physical location of the motor, and does not change. The following graphics show the motor numbers used by the ArduCopter firmware.</p>
+<p align="center">
+    <img src="http://ardupilot.org/copter/_images/MOTORS_QuadX_QuadPlus.jpg" class="img-responsive" style="max-width:800px" />
+    <img src="http://ardupilot.org/copter/_images/MOTORS_Hexa-octo-y6.jpg" class="img-responsive" style="max-width:800px" />
+</p>
+
+<p>The <strong>output number</strong> refers to the physical pin on each board that each motor is assigned to. These pins are on the corners of the board and are numbered “MAIN1” through “MAIN8”.</p>
+
+<p>Any motor number can be re-mapped to any output. This is done by setting the SERVOX_FUNCTION (where x is the output number) to the appropriate value given in the table below.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Motor Number Desired</th>
+      <th>SERVORX_FUNCTION Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>40</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For example, if I wanted to plug Motor 3 into the MAIN5 connector on the board, I would set the SERVO5_FUNCTION parameter to 35.</p>
+
+<h4 id="hex-setup">Hex Setup</h4>
+
+<p>The following procedure may be used to configure the board for a hexacopter:</p>
+<ol>
+  <li>Flash the cube with ArduCopter 3.5.0 or later.
+    <ul>
+      <li>Arducopter 3.5.0 is still in Beta, so it will be necessary to click the “Beta Firmwares” link in mission planner.</li>
+    </ul>
+  </li>
+  <li>Connect to the cube in mission planner and navigate to the <strong>Initial Setup -&gt; Mandatory Hardware -&gt; Frame Type</strong> page.</li>
+  <li>Set the FRAME_CLASS to Octa</li>
+  <li>Reboot the Pixhawk Cube</li>
+  <li>Navigate to the <strong>Config/Tuning -&gt; Full Parameter List</strong> Page.
+    <ul>
+      <li><strong>Note:</strong> If you are using a fresh installation of mission planner you will have to enable this page by setting <strong>Config/Tuning-&gt;Planner-&gt;Layout</strong> to <strong>“Advanced”</strong></li>
+    </ul>
+  </li>
+  <li>Set the following parameter values click ‘Write Params’ :
+    <ul>
+      <li>SERVO1_FUNCTION=37</li>
+      <li>SERVO2_FUNCTION=38</li>
+      <li>SERVO3_FUNCTION=35</li>
+      <li>SERV04_FUNCTION=36</li>
+      <li>SERVO5_FUNCTION=34</li>
+      <li>SERVO6_FUNCTION=33</li>
+    </ul>
+  </li>
+  <li>
+    <p>Connect your ESCs according to the following table using the motor numbers from the “Hexa X” picture above</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Motor Number</th>
+          <th>Output</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>MAIN3</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>MAIN5</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>MAIN6</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>MAIN4</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>MAIN1</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>MAIN2</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+
+<h4 id="octo-setup">Octo Setup</h4>
+
+<p>The following procedure may be used to configure the board for a flat octocopter (not necessary for an X8):</p>
+<ol>
+  <li>Flash the cube with ArduCopter 3.5.0 or later.
+    <ul>
+      <li>Arducopter 3.5.0 is still in Beta, so it will be necessary to click the “Beta Firmwares” link in mission planner.</li>
+    </ul>
+  </li>
+  <li>Connect to the cube in mission planner and navigate to the <strong>Initial Setup -&gt; Mandatory Hardware -&gt; Frame Type</strong> page.</li>
+  <li>Set the FRAME_CLASS to Octa</li>
+  <li>Reboot the Pixhawk Cube</li>
+  <li>Navigate to the <strong>Config/Tuning -&gt; Full Parameter List</strong> Page.
+    <ul>
+      <li><strong>Note:</strong> If you are using a fresh installation of mission planner you will have to enable this page by setting <strong>Config/Tuning-&gt;Planner-&gt;Layout</strong> to <strong>“Advanced”</strong></li>
+    </ul>
+  </li>
+  <li>Set the following parameter values click ‘Write Params’ :
+    <ul>
+      <li>SERVO1_FUNCTION=33</li>
+      <li>SERVO2_FUNCTION=34</li>
+      <li>SERVO3_FUNCTION=39</li>
+      <li>SERV04_FUNCTION=36</li>
+      <li>SERVO5_FUNCTION=37</li>
+      <li>SERVO6_FUNCTION=35</li>
+      <li>SERVO7_FUNCTION=40</li>
+      <li>SERVO8_FUNCTION=38</li>
+    </ul>
+  </li>
+  <li>
+    <p>Connect your ESCs according to the following table using the motor numbers from the “Octo X” picture above</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Motor Number</th>
+          <th>Output</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>MAIN1</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>MAIN2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>MAIN6</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>MAIN4</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>MAIN5</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>MAIN8</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>MAIN3</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>MAIN7</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
 
 <h1 id="digital-and-analog-connectors">Digital and Analog Connectors</h1>
 <p>The SpektreWorks carrier board comes with all of the same JST-brand receptacles as the standard ProfiCNC carrier board with a few exceptions. The tables below describe the pin-out of each JST connector.</p>

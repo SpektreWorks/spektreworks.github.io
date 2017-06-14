@@ -11,6 +11,8 @@ nav:
 - - ESC Connections: esc-connections
 - - Aux Pins: aux-pins
 - Motor Pins Assignments: motor-pin-assignments
+- - Hex Setup: hex-setup
+- - Octo Setup: octo-setup
 - Digital and Analog Connectors: digital-and-analog-connectors
 - - Telemetry 1: telemetry-1
 - - Telemetry 2: telemetry-2
@@ -118,9 +120,91 @@ Additionally, the six “Aux Out” connections are available as part of a 3x8 g
 # Motor Pin Assignments
 The default Motor PWM pin arrangement of the carrier board was chosen for easy integration with a standard quadcopter or X8 copter. For other vehicle or frame types, it is necessary to re-map the motor outputs to the correct corners of the board. This is possible for ArduCopter Firmware v3.5.0+.
 
+When re-mapping PWM outputs with Ardupilot, it is important to distinguish the **motor number** from the **output number**. The **motor number** refers to the physical location of the motor, and does not change. The following graphics show the motor numbers used by the ArduCopter firmware.
+<p align="center">
+    <img src="http://ardupilot.org/copter/_images/MOTORS_QuadX_QuadPlus.jpg" class="img-responsive" style="max-width:800px"  />
+    <img src="http://ardupilot.org/copter/_images/MOTORS_Hexa-octo-y6.jpg" class="img-responsive" style="max-width:800px"  />
+</p>
+
+The **output number** refers to the physical pin on each board that each motor is assigned to. These pins are on the corners of the board and are numbered "MAIN1" through "MAIN8".
+
+Any motor number can be re-mapped to any output. This is done by setting the SERVOX_FUNCTION (where x is the output number) to the appropriate value given in the table below.
+
+| Motor Number Desired | SERVORX_FUNCTION Value |
+|----------------------|------------------------|
+| 1 | 33 |
+| 2 | 34 |
+| 3 | 35 |
+| 4 | 36 | 
+| 5 | 37 |
+| 6 | 38 |
+| 7 | 39 |
+| 8 | 40 |
+
+For example, if I wanted to plug Motor 3 into the MAIN5 connector on the board, I would set the SERVO5_FUNCTION parameter to 35.
+
+#### Hex Setup
+
+The following procedure may be used to configure the board for a hexacopter:
+1. Flash the cube with ArduCopter 3.5.0 or later. 
+	* Arducopter 3.5.0 is still in Beta, so it will be necessary to click the "Beta Firmwares" link in mission planner.
+2. Connect to the cube in mission planner and navigate to the **Initial Setup -> Mandatory Hardware -> Frame Type** page.
+3. Set the FRAME_CLASS to Octa
+4. Reboot the Pixhawk Cube
+5. Navigate to the **Config/Tuning -> Full Parameter List** Page. 
+	* **Note:** If you are using a fresh installation of mission planner you will have to enable this page by setting **Config/Tuning->Planner->Layout** to **"Advanced"**
+6. Set the following parameter values click 'Write Params' :
+	* SERVO1_FUNCTION=37
+	* SERVO2_FUNCTION=38
+	* SERVO3_FUNCTION=35
+	* SERV04_FUNCTION=36
+	* SERVO5_FUNCTION=34
+	* SERVO6_FUNCTION=33
+7. Connect your ESCs according to the following table using the motor numbers from the "Hexa X" picture above
+	
+	| Motor Number | Output |
+	|---|-------|
+	| 1 | MAIN3 |
+	| 2 | MAIN5 |
+	| 3 | MAIN6 |
+	| 4 | MAIN4 |
+	| 5 | MAIN1 |
+	| 6 | MAIN2 |
+
+#### Octo Setup
+
+The following procedure may be used to configure the board for a flat octocopter (not necessary for an X8):
+1. Flash the cube with ArduCopter 3.5.0 or later. 
+	* Arducopter 3.5.0 is still in Beta, so it will be necessary to click the "Beta Firmwares" link in mission planner.
+2. Connect to the cube in mission planner and navigate to the **Initial Setup -> Mandatory Hardware -> Frame Type** page.
+3. Set the FRAME_CLASS to Octa
+4. Reboot the Pixhawk Cube
+5. Navigate to the **Config/Tuning -> Full Parameter List** Page. 
+	* **Note:** If you are using a fresh installation of mission planner you will have to enable this page by setting **Config/Tuning->Planner->Layout** to **"Advanced"**
+6. Set the following parameter values click 'Write Params' :
+	* SERVO1_FUNCTION=33
+	* SERVO2_FUNCTION=34
+	* SERVO3_FUNCTION=39
+	* SERV04_FUNCTION=36
+	* SERVO5_FUNCTION=37
+	* SERVO6_FUNCTION=35
+	* SERVO7_FUNCTION=40
+	* SERVO8_FUNCTION=38
+7. Connect your ESCs according to the following table using the motor numbers from the "Octo X" picture above
+	
+	| Motor Number | Output |
+	|---|-------|
+	| 1 | MAIN1 |
+	| 2 | MAIN2 |
+	| 3 | MAIN6 |
+	| 4 | MAIN4 | 
+	| 5 | MAIN5 |
+	| 6 | MAIN8 |
+	| 7 | MAIN3 |
+	| 8 | MAIN7 |
 
 
-The following procedure may be used to 
+ 
 
 # Digital and Analog Connectors
 The SpektreWorks carrier board comes with all of the same JST-brand receptacles as the standard ProfiCNC carrier board with a few exceptions. The tables below describe the pin-out of each JST connector.
