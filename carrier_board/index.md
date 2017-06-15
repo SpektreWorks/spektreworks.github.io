@@ -81,8 +81,8 @@ In order to accurately read the voltage and current using the built-in sensors o
 
 
 
-### General Use Power Connectors
-There are three general use power connectors to source power for external devices and payloads. They are labeled as J1, J14, and J19 in white ink on the board. Molex brand Clik-Mate connectors are used for the power connectors.
+### General Use Payload Power Connectors
+There are three general use payload power connectors to source power for external devices and payloads. They are labeled as J1, J14, and J19 in white ink on the board. Molex brand Clik-Mate connectors are used for the power connectors.
 
 
 | Reference	| Voltage         | Max Current | Pinout                 | Mating Part Number|
