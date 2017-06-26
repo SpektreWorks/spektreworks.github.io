@@ -118,12 +118,13 @@ Additionally, the six “Aux Out” connections are available as part of a 3x8 g
 </p>
 
 # Motor Pin Assignments
-The default Motor PWM pin arrangement of the carrier board was chosen for easy integration with a standard quadcopter or X8 copter. For other vehicle or frame types, it is necessary to re-map the motor outputs to the correct corners of the board. This is possible for ArduCopter Firmware v3.5.0+.
+The default Motor PWM pin arrangement of the carrier board was chosen for easy integration with a standard quadcopter. For other vehicle or frame types (including X8, Hex, Octo, etc), it is necessary to re-map the motor outputs to the correct corners of the board. This is possible for ArduCopter Firmware v3.5.0+.
 
 When re-mapping PWM outputs with Ardupilot, it is important to distinguish the **motor number** from the **output number**. The **motor number** refers to the physical location of the motor, and does not change. The following graphics show the motor numbers used by the ArduCopter firmware.
 <p align="center">
     <img src="http://ardupilot.org/copter/_images/MOTORS_QuadX_QuadPlus.jpg" class="img-responsive" style="max-width:800px"  />
     <img src="http://ardupilot.org/copter/_images/MOTORS_Hexa-octo-y6.jpg" class="img-responsive" style="max-width:800px"  />
+    <img src="http://ardupilot.org/copter/_images/MOTORS_X8.jpg" class="img-responsive" style="max-width:800px"  />
 </p>
 
 The **output number** refers to the physical pin on each board that each motor is assigned to. These pins are on the corners of the board and are numbered "MAIN1" through "MAIN8".
