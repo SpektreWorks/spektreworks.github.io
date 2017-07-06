@@ -80,6 +80,10 @@ In order to accurately read the voltage and current using the built-in sensors o
 |    BATT_VOLT_MULT      |    15.3     |
 |    BATT_VOLT_PIN       |    2        |
 
+To set these parameters in mission planner, navigate to the **Config/Tuning -> Full Parameter List** Page. 
+* **Note:** If you are using a fresh installation of mission planner you will have to enable this page by setting **Config/Tuning->Planner->Layout** to **"Advanced"**
+
+You may either type in these parameters manually, or download this <a href="/assets/params/Multirotor_PCB_POWER.param" download> parameter file </a> and upload via mission planner. After inputting via either method, be sure to click "Write Params" to save the parameters in the Cube.
 
 
 ### General Use Payload Power Connectors
@@ -155,13 +159,15 @@ The following procedure may be used to configure the board for a hexacopter:
 4. Reboot the Pixhawk Cube
 5. Navigate to the **Config/Tuning -> Full Parameter List** Page. 
 	* **Note:** If you are using a fresh installation of mission planner you will have to enable this page by setting **Config/Tuning->Planner->Layout** to **"Advanced"**
-6. Set the following parameter values and click 'Write Params' :
+6. Set the following parameter values:
 	* SERVO1_FUNCTION=37
 	* SERVO2_FUNCTION=38
 	* SERVO3_FUNCTION=35
 	* SERV04_FUNCTION=36
 	* SERVO5_FUNCTION=34
 	* SERVO6_FUNCTION=33
+	* You may either type in these parameters manually, or download this <a href="/assets/params/Multirotor_PCB_HEX.param" download> parameter file </a> and upload via mission planner. After inputting via either method, be sure to click "Write Params" to save the parameters in the Cube.
+
 7. Connect your ESCs according to the following table using the motor numbers from the "Hexa X" picture above
 	
 	| Motor Number | Output |
@@ -183,7 +189,7 @@ The following procedure may be used to configure the board for a flat octacopter
 4. Reboot the Pixhawk Cube
 5. Navigate to the **Config/Tuning -> Full Parameter List** Page. 
 	* **Note:** If you are using a fresh installation of mission planner you will have to enable this page by setting **Config/Tuning->Planner->Layout** to **"Advanced"**
-6. Set the following parameter values and click 'Write Params' :
+6. Set the following parameter values:
 	* SERVO1_FUNCTION=33
 	* SERVO2_FUNCTION=34
 	* SERVO3_FUNCTION=39
@@ -192,6 +198,8 @@ The following procedure may be used to configure the board for a flat octacopter
 	* SERVO6_FUNCTION=35
 	* SERVO7_FUNCTION=40
 	* SERVO8_FUNCTION=38
+	* You may either type in these parameters manually, or download this <a href="/assets/params/Multirotor_PCB_OCTA.param" download> parameter file </a> and upload via mission planner. After inputting via either method, be sure to click "Write Params" to save the parameters in the Cube.
+
 7. Connect your ESCs according to the following table using the motor numbers from the "Octo X" picture above
 	
 	| Motor Number | Output |
@@ -215,9 +223,11 @@ The following procedure may be used to configure the board for an X-8 (OctaQuad)
 4. Reboot the Pixhawk Cube
 5. Navigate to the **Config/Tuning -> Full Parameter List** Page. 
 	* **Note:** If you are using a fresh installation of mission planner you will have to enable this page by setting **Config/Tuning->Planner->Layout** to **"Advanced"**
-6. Set the following parameter values and click 'Write Params' :
+6. Set the following parameter values:
 	* SERVO2_FUNCTION=35
 	* SERVO3_FUNCTION=34
+	* You may either type in these parameters manually, or download this <a href="/assets/params/Multirotor_PCB_X8.param" download> parameter file </a> and upload via mission planner. After inputting via either method, be sure to click "Write Params" to save the parameters in the Cube.
+
 7. Connect your ESCs according to the following table using the motor numbers from the "Octo X" picture above
 	
 	| Motor Number | Output |

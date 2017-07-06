@@ -249,7 +249,24 @@
               
               
               <li>
-                <a  href="#octo-setup">Octo Setup</a>
+                <a  href="#octa-setup">Octa Setup</a>
+              </li>
+              
+              
+            </ul>
+            
+            
+            
+            
+            
+            
+
+            
+            <ul class="nav nav-stacked">
+              
+              
+              <li>
+                <a  href="#x-8-setup">X-8 Setup</a>
               </li>
               
               
@@ -659,8 +676,15 @@
   </tbody>
 </table>
 
-<h3 id="general-use-power-connectors">General Use Power Connectors</h3>
-<p>There are three general use power connectors to source power for external devices and payloads. They are labeled as J1, J14, and J19 in white ink on the board. Molex brand Clik-Mate connectors are used for the power connectors.</p>
+<p>To set these parameters in mission planner, navigate to the <strong>Config/Tuning -&gt; Full Parameter List</strong> Page.</p>
+<ul>
+  <li><strong>Note:</strong> If you are using a fresh installation of mission planner you will have to enable this page by setting <strong>Config/Tuning-&gt;Planner-&gt;Layout</strong> to <strong>“Advanced”</strong></li>
+</ul>
+
+<p>You may either type in these parameters manually, or download this <a href="/assets/params/Multirotor_PCB_POWER.param" download=""> parameter file </a> and upload via mission planner. After inputting via either method, be sure to click “Write Params” to save the parameters in the Cube.</p>
+
+<h3 id="general-use-payload-power-connectors">General Use Payload Power Connectors</h3>
+<p>There are three general use payload power connectors to source power for external devices and payloads. They are labeled as J1, J14, and J19 in white ink on the board. Molex brand Clik-Mate connectors are used for the power connectors.</p>
 
 <table>
   <thead>
@@ -724,12 +748,13 @@
 </p>
 
 <h1 id="motor-pin-assignments">Motor Pin Assignments</h1>
-<p>The default Motor PWM pin arrangement of the carrier board was chosen for easy integration with a standard quadcopter or X8 copter. For other vehicle or frame types, it is necessary to re-map the motor outputs to the correct corners of the board. This is possible for ArduCopter Firmware v3.5.0+.</p>
+<p>The default Motor PWM pin arrangement of the carrier board was chosen for easy integration with a standard quadcopter. For other vehicle or frame types (including X8, Hex, Octo, etc), it is necessary to re-map the motor outputs to the correct corners of the board. This is possible for ArduCopter Firmware v3.5.0+.</p>
 
 <p>When re-mapping PWM outputs with Ardupilot, it is important to distinguish the <strong>motor number</strong> from the <strong>output number</strong>. The <strong>motor number</strong> refers to the physical location of the motor, and does not change. The following graphics show the motor numbers used by the ArduCopter firmware.</p>
 <p align="center">
     <img src="http://ardupilot.org/copter/_images/MOTORS_QuadX_QuadPlus.jpg" class="img-responsive" style="max-width:800px" />
     <img src="http://ardupilot.org/copter/_images/MOTORS_Hexa-octo-y6.jpg" class="img-responsive" style="max-width:800px" />
+    <img src="http://ardupilot.org/copter/_images/MOTORS_X8.jpg" class="img-responsive" style="max-width:800px" />
 </p>
 
 <p>The <strong>output number</strong> refers to the physical pin on each board that each motor is assigned to. These pins are on the corners of the board and are numbered “MAIN1” through “MAIN8”.</p>
@@ -781,7 +806,7 @@
 
 <p>For example, if I wanted to plug Motor 3 into the MAIN5 connector on the board, I would set the SERVO5_FUNCTION parameter to 35.</p>
 
-<h4 id="hex-setup">Hex Setup</h4>
+<h3 id="hex-setup">Hex Setup</h3>
 
 <p>The following procedure may be used to configure the board for a hexacopter:</p>
 <ol>
@@ -791,14 +816,14 @@
     </ul>
   </li>
   <li>Connect to the cube in mission planner and navigate to the <strong>Initial Setup -&gt; Mandatory Hardware -&gt; Frame Type</strong> page.</li>
-  <li>Set the FRAME_CLASS to Octa</li>
+  <li>Set the FRAME_CLASS to Hexa</li>
   <li>Reboot the Pixhawk Cube</li>
   <li>Navigate to the <strong>Config/Tuning -&gt; Full Parameter List</strong> Page.
     <ul>
       <li><strong>Note:</strong> If you are using a fresh installation of mission planner you will have to enable this page by setting <strong>Config/Tuning-&gt;Planner-&gt;Layout</strong> to <strong>“Advanced”</strong></li>
     </ul>
   </li>
-  <li>Set the following parameter values click ‘Write Params’ :
+  <li>Set the following parameter values:
     <ul>
       <li>SERVO1_FUNCTION=37</li>
       <li>SERVO2_FUNCTION=38</li>
@@ -806,6 +831,7 @@
       <li>SERV04_FUNCTION=36</li>
       <li>SERVO5_FUNCTION=34</li>
       <li>SERVO6_FUNCTION=33</li>
+      <li>You may either type in these parameters manually, or download this <a href="/assets/params/Multirotor_PCB_HEX.param" download=""> parameter file </a> and upload via mission planner. After inputting via either method, be sure to click “Write Params” to save the parameters in the Cube.</li>
     </ul>
   </li>
   <li>
@@ -848,9 +874,9 @@
   </li>
 </ol>
 
-<h4 id="octo-setup">Octo Setup</h4>
+<h3 id="octa-setup">Octa Setup</h3>
 
-<p>The following procedure may be used to configure the board for a flat octocopter (not necessary for an X8):</p>
+<p>The following procedure may be used to configure the board for a flat octacopter:</p>
 <ol>
   <li>Flash the cube with ArduCopter 3.5.0 or later.
     <ul>
@@ -865,7 +891,7 @@
       <li><strong>Note:</strong> If you are using a fresh installation of mission planner you will have to enable this page by setting <strong>Config/Tuning-&gt;Planner-&gt;Layout</strong> to <strong>“Advanced”</strong></li>
     </ul>
   </li>
-  <li>Set the following parameter values click ‘Write Params’ :
+  <li>Set the following parameter values:
     <ul>
       <li>SERVO1_FUNCTION=33</li>
       <li>SERVO2_FUNCTION=34</li>
@@ -875,6 +901,7 @@
       <li>SERVO6_FUNCTION=35</li>
       <li>SERVO7_FUNCTION=40</li>
       <li>SERVO8_FUNCTION=38</li>
+      <li>You may either type in these parameters manually, or download this <a href="/assets/params/Multirotor_PCB_OCTA.param" download=""> parameter file </a> and upload via mission planner. After inputting via either method, be sure to click “Write Params” to save the parameters in the Cube.</li>
     </ul>
   </li>
   <li>
@@ -925,10 +952,82 @@
   </li>
 </ol>
 
+<h3 id="x-8-setup">X-8 Setup</h3>
+
+<p>The following procedure may be used to configure the board for an X-8 (OctaQuad):</p>
+<ol>
+  <li>Flash the cube with ArduCopter 3.5.0 or later.
+    <ul>
+      <li>Arducopter 3.5.0 is still in Beta, so it will be necessary to click the “Beta Firmwares” link in mission planner.</li>
+    </ul>
+  </li>
+  <li>Connect to the cube in mission planner and navigate to the <strong>Initial Setup -&gt; Mandatory Hardware -&gt; Frame Type</strong> page.</li>
+  <li>Set the FRAME_CLASS to OctaQuad</li>
+  <li>Reboot the Pixhawk Cube</li>
+  <li>Navigate to the <strong>Config/Tuning -&gt; Full Parameter List</strong> Page.
+    <ul>
+      <li><strong>Note:</strong> If you are using a fresh installation of mission planner you will have to enable this page by setting <strong>Config/Tuning-&gt;Planner-&gt;Layout</strong> to <strong>“Advanced”</strong></li>
+    </ul>
+  </li>
+  <li>Set the following parameter values:
+    <ul>
+      <li>SERVO2_FUNCTION=35</li>
+      <li>SERVO3_FUNCTION=34</li>
+      <li>You may either type in these parameters manually, or download this <a href="/assets/params/Multirotor_PCB_X8.param" download=""> parameter file </a> and upload via mission planner. After inputting via either method, be sure to click “Write Params” to save the parameters in the Cube.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Connect your ESCs according to the following table using the motor numbers from the “Octo X” picture above</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Motor Number</th>
+          <th>Output</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>MAIN1</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>MAIN3</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>MAIN2</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>MAIN4</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>MAIN5</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>MAIN6</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>MAIN7</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>MAIN8</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+
 <h1 id="digital-and-analog-connectors">Digital and Analog Connectors</h1>
 <p>The SpektreWorks carrier board comes with all of the same JST-brand receptacles as the standard ProfiCNC carrier board with a few exceptions. The tables below describe the pin-out of each JST connector.</p>
 
-<h4 id="telemetry-1">Telemetry 1</h4>
+<h3 id="telemetry-1">Telemetry 1</h3>
 
 <table>
   <thead>
@@ -972,7 +1071,7 @@
   </tbody>
 </table>
 
-<h4 id="telemetry-2">Telemetry 2</h4>
+<h3 id="telemetry-2">Telemetry 2</h3>
 
 <table>
   <thead>
@@ -1016,7 +1115,7 @@
   </tbody>
 </table>
 
-<h4 id="gps2-ser3i2c1">GPS2 (SER3/I2C1)</h4>
+<h3 id="gps2-ser3i2c1">GPS2 (SER3/I2C1)</h3>
 
 <table>
   <thead>
@@ -1075,7 +1174,7 @@
   </tbody>
 </table>
 
-<h4 id="gps2-ser4i2c2">GPS2 (SER4/I2C2)</h4>
+<h3 id="gps2-ser4i2c2">GPS2 (SER4/I2C2)</h3>
 
 <table>
   <thead>
@@ -1119,7 +1218,7 @@
   </tbody>
 </table>
 
-<h4 id="i2c1">I2C1</h4>
+<h3 id="i2c1">I2C1</h3>
 
 <table>
   <thead>
@@ -1153,7 +1252,7 @@
   </tbody>
 </table>
 
-<h4 id="i2c2">I2C2</h4>
+<h3 id="i2c2">I2C2</h3>
 
 <table>
   <thead>
@@ -1187,7 +1286,7 @@
   </tbody>
 </table>
 
-<h4 id="can1">CAN1</h4>
+<h3 id="can1">CAN1</h3>
 
 <table>
   <thead>
@@ -1221,7 +1320,7 @@
   </tbody>
 </table>
 
-<h4 id="can2">CAN2</h4>
+<h3 id="can2">CAN2</h3>
 
 <table>
   <thead>
@@ -1255,7 +1354,7 @@
   </tbody>
 </table>
 
-<h4 id="spi">SPI</h4>
+<h3 id="spi">SPI</h3>
 
 <table>
   <thead>
@@ -1306,7 +1405,7 @@
 
 <p>Note: The SPI port will likely be removed in future versions of this carrier board.</p>
 
-<h4 id="adc">ADC</h4>
+<h3 id="adc">ADC</h3>
 
 <table>
   <thead>
@@ -1342,7 +1441,7 @@
 
 <p>The ADC_IN input voltage is divided by two using a symmetric 10kΩ voltage divider on the board. Do not exceed analog voltages above 6.6V on this pin.</p>
 
-<h4 id="batt2-sense">BATT2 Sense</h4>
+<h3 id="batt2-sense">BATT2 Sense</h3>
 
 <table>
   <thead>
@@ -1394,7 +1493,7 @@
 	<a href="https://www.codecogs.com/eqnedit.php?latex=BATT2\_VOLT\_MULT=\frac{V_{max}}{3.3}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?BATT2\_VOLT\_MULT=\frac{V_{max}}{3.3}" title="BATT2\_VOLT\_MULT=\frac{V_{max}}{3.3}" /></a>
 </center>
 
-<h4 id="debug">Debug</h4>
+<h3 id="debug">Debug</h3>
 
 <p>Two Debug connectors are provided for developer use. One debug header is provided for each process on the Pixhawk 2.1 Cube.</p>
 
@@ -1493,7 +1592,7 @@
 <p><strong>Err Light:</strong> If one of the two regulators has failed, this light will shine red. <strong>Do not fly if this light is red.</strong></p>
 
 <p align="center">
-    <img src="/assets/images/light_truth_table.png" class="img-responsive" style="max-width:800px" />
+    <img src="/assets/images/light_truth_table.PNG" class="img-responsive" style="max-width:800px" />
 </p>
 
 <h1 id="buzzer-and-volume-control">Buzzer and Volume Control</h1>
@@ -1504,12 +1603,12 @@
 
 <h1 id="mechanical-information">Mechanical Information</h1>
 
-<h4 id="outer-dimensions">Outer Dimensions</h4>
+<h3 id="outer-dimensions">Outer Dimensions</h3>
 <p align="center">
     <img src="/assets/images/carrier_board_dimensions.png" class="img-responsive" style="max-width:800px" />
 </p>
 
-<h4 id="mounting-hole-locations">Mounting Hole Locations</h4>
+<h3 id="mounting-hole-locations">Mounting Hole Locations</h3>
 
 <p align="center">
     <img src="/assets/images/carrier_board_holes.png" class="img-responsive" style="max-width:800px" />
