@@ -12,7 +12,8 @@ nav:
 - - Aux Pins: aux-pins
 - Motor Pins Assignments: motor-pin-assignments
 - - Hex Setup: hex-setup
-- - Octo Setup: octo-setup
+- - Octa Setup: octa-setup
+- - X-8 Setup: x-8-setup
 - Digital and Analog Connectors: digital-and-analog-connectors
 - - Telemetry 1: telemetry-1
 - - Telemetry 2: telemetry-2
@@ -154,7 +155,7 @@ The following procedure may be used to configure the board for a hexacopter:
 4. Reboot the Pixhawk Cube
 5. Navigate to the **Config/Tuning -> Full Parameter List** Page. 
 	* **Note:** If you are using a fresh installation of mission planner you will have to enable this page by setting **Config/Tuning->Planner->Layout** to **"Advanced"**
-6. Set the following parameter values click 'Write Params' :
+6. Set the following parameter values and click 'Write Params' :
 	* SERVO1_FUNCTION=37
 	* SERVO2_FUNCTION=38
 	* SERVO3_FUNCTION=35
@@ -172,9 +173,9 @@ The following procedure may be used to configure the board for a hexacopter:
 	| 5 | MAIN1 |
 	| 6 | MAIN2 |
 
-### Octo Setup
+### Octa Setup
 
-The following procedure may be used to configure the board for a flat octocopter (not necessary for an X8):
+The following procedure may be used to configure the board for a flat octacopter:
 1. Flash the cube with ArduCopter 3.5.0 or later. 
 	* Arducopter 3.5.0 is still in Beta, so it will be necessary to click the "Beta Firmwares" link in mission planner.
 2. Connect to the cube in mission planner and navigate to the **Initial Setup -> Mandatory Hardware -> Frame Type** page.
@@ -182,7 +183,7 @@ The following procedure may be used to configure the board for a flat octocopter
 4. Reboot the Pixhawk Cube
 5. Navigate to the **Config/Tuning -> Full Parameter List** Page. 
 	* **Note:** If you are using a fresh installation of mission planner you will have to enable this page by setting **Config/Tuning->Planner->Layout** to **"Advanced"**
-6. Set the following parameter values click 'Write Params' :
+6. Set the following parameter values and click 'Write Params' :
 	* SERVO1_FUNCTION=33
 	* SERVO2_FUNCTION=34
 	* SERVO3_FUNCTION=39
@@ -204,6 +205,31 @@ The following procedure may be used to configure the board for a flat octocopter
 	| 7 | MAIN3 |
 	| 8 | MAIN7 |
 
+### X-8 Setup
+
+The following procedure may be used to configure the board for an X-8 (OctaQuad):
+1. Flash the cube with ArduCopter 3.5.0 or later. 
+	* Arducopter 3.5.0 is still in Beta, so it will be necessary to click the "Beta Firmwares" link in mission planner.
+2. Connect to the cube in mission planner and navigate to the **Initial Setup -> Mandatory Hardware -> Frame Type** page.
+3. Set the FRAME_CLASS to OctaQuad
+4. Reboot the Pixhawk Cube
+5. Navigate to the **Config/Tuning -> Full Parameter List** Page. 
+	* **Note:** If you are using a fresh installation of mission planner you will have to enable this page by setting **Config/Tuning->Planner->Layout** to **"Advanced"**
+6. Set the following parameter values and click 'Write Params' :
+	* SERVO2_FUNCTION=35
+	* SERVO3_FUNCTION=34
+7. Connect your ESCs according to the following table using the motor numbers from the "Octo X" picture above
+	
+	| Motor Number | Output |
+	|---|-------|
+	| 1 | MAIN1 |
+	| 2 | MAIN3 |
+	| 3 | MAIN2 |
+	| 4 | MAIN4 | 
+	| 5 | MAIN5 |
+	| 6 | MAIN6 |
+	| 7 | MAIN7 |
+	| 8 | MAIN8 |
 
  
 
