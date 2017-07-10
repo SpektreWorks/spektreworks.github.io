@@ -268,12 +268,11 @@ The SpektreWorks carrier board comes with all of the same JST-brand receptacles 
 |            |             |    5. Serial 2 RTS    |
 |            |             |    6. GND             |
 
-### GPS2 (SER3/I2C1)
+### GPS1 (SER3/I2C1)
 
 |        Name        |    Label    |    Pins                |
 |--------------------|-------------|------------------------|
 |    SER3/I2C1       |    J2       |    1. 5V               |
-|                    |             |    1. 5V               |
 |                    |             |    2. Serial 3 TX      |
 |                    |             |    3. Serial 3 RX      |
 |                    |             |    4. SCL1             |
