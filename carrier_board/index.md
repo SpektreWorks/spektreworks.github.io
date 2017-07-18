@@ -153,7 +153,6 @@ For example, if I wanted to plug Motor 3 into the MAIN5 connector on the board, 
 
 The following procedure may be used to configure the board for a hexacopter:
 1. Flash the cube with ArduCopter 3.5.0 or later. 
-	* Arducopter 3.5.0 is still in Beta, so it will be necessary to click the "Beta Firmwares" link in mission planner.
 2. Connect to the cube in mission planner and navigate to the **Initial Setup -> Mandatory Hardware -> Frame Type** page.
 3. Set the FRAME_CLASS to Hexa
 4. Reboot the Pixhawk Cube
@@ -183,7 +182,6 @@ The following procedure may be used to configure the board for a hexacopter:
 
 The following procedure may be used to configure the board for a flat octacopter:
 1. Flash the cube with ArduCopter 3.5.0 or later. 
-	* Arducopter 3.5.0 is still in Beta, so it will be necessary to click the "Beta Firmwares" link in mission planner.
 2. Connect to the cube in mission planner and navigate to the **Initial Setup -> Mandatory Hardware -> Frame Type** page.
 3. Set the FRAME_CLASS to Octa
 4. Reboot the Pixhawk Cube
@@ -217,7 +215,6 @@ The following procedure may be used to configure the board for a flat octacopter
 
 The following procedure may be used to configure the board for an X-8 (OctaQuad):
 1. Flash the cube with ArduCopter 3.5.0 or later. 
-	* Arducopter 3.5.0 is still in Beta, so it will be necessary to click the "Beta Firmwares" link in mission planner.
 2. Connect to the cube in mission planner and navigate to the **Initial Setup -> Mandatory Hardware -> Frame Type** page.
 3. Set the FRAME_CLASS to OctaQuad
 4. Reboot the Pixhawk Cube
