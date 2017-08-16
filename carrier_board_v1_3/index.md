@@ -101,7 +101,8 @@ All three general use power connectors are independently fused with resettable f
 ### ESC Connections
 At each corner of the board are solder pads for ESC power. The power wires from your ESCs may be soldered to the pads on the top or bottom surface.
 
-Next to the ESC power pads are 3x3 0.1” header pins. The top row of pins provides power for navigation lights. The center pin is 12V and the right pin is ground. The left pin is unused and should be removed. The bottom two rows of pins are for the ESC PWM signal. **Make sure you do not plug in an ESC cable into the top row of this connector.** These two rows correspond to two of the “Main Out” connections of the Pixhawk Cube. The rows are labeled in white ink on the board. The “S”, “+”, and “-“ correspond to the PWM signal, power, and ground, respectively.  All eight Main Out connections are available in the four corners of the board. It helps to look at the header pins from the side to see which row corresponds to which label.
+Next to the ESC power pads are 3x3 0.1” header pins. The top row of pins provides power for navigation lights. The center pin is 12V and the right pin is ground. The left pin is unused and should be removed. **Make sure you do not plug in an ESC cable into the top row of this connector.**  
+The bottom two rows of pins are for the ESC PWM signal. These two rows correspond to two of the “Main Out” connections of the Pixhawk Cube. The rows are labeled in white ink on the board. The “S”, “+”, and “-“ correspond to the PWM signal, power, and ground, respectively.  All eight Main Out connections are available in the four corners of the board. It helps to look at the header pins from the side to see which row corresponds to which label.
 
 <p align="center">
     <img src="/assets/images/PWMPins_v1_3.png" class="img-responsive" style="max-width:900px"  />
