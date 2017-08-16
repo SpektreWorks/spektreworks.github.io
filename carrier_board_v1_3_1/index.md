@@ -101,10 +101,10 @@ All three general use power connectors are independently fused with resettable f
 ### ESC Connections
 At each corner of the board are solder pads for ESC power. The power wires from your ESCs may be soldered to the pads on the top or bottom surface.
 
-Next to the ESC power pads are 3x3 0.1” header pins. The top row of pins provides power for navigation lights. The center pin is 12V and the right pin is ground. The left pin is unused and should be removed. The bottom two rows of pins are for the ESC PWM signal. **Make sure you do not plug in an ESC cable into the top row of this connector.** These two rows correspond to two of the “Main Out” connections of the Pixhawk Cube. The rows are labeled in white ink on the board. The “S”, “+”, and “-“ correspond to the PWM signal, power, and ground, respectively.  All eight Main Out connections are available in the four corners of the board. It helps to look at the header pins from the side to see which row corresponds to which label.
+Next to the ESC power pads are 3x3 0.1” header pins. The bottom row of pins provides power for navigation lights. The center pin is 12V and the right pin is ground. The left pin is unused and should be removed. The top two rows of pins are for the ESC PWM signal. **Make sure you do not plug in an ESC cable into the bottom row of this connector.** These two rows correspond to two of the “Main Out” connections of the Pixhawk Cube. The rows are labeled in white ink on the board. The “S”, “+”, and “-“ correspond to the PWM signal, power, and ground, respectively.  All eight Main Out connections are available in the four corners of the board. It helps to look at the header pins from the side to see which row corresponds to which label.
 
 <p align="center">
-    <img src="/assets/images/PWMPins.png" class="img-responsive" style="max-width:900px"  />
+    <img src="/assets/images/PWMPins_v1_3_1.png" class="img-responsive" style="max-width:900px"  />
 </p>
 
 By default, the board does not supply power to the ESC PWM connections. However, if no BEC is available to power the ESCs, the user may bridge JP1 with solder to provide 5.3V from the board to the ESCs. **If JP1 is bridged with solder, do not plug a BEC into the ESC connections.**
@@ -116,7 +116,7 @@ By default, the board does not supply power to the ESC PWM connections. However,
 Most commercially available ESCs expect 3.3V PWM signals from the autopilot to control the motor. This is the default setting of a Pixhawk Cube. If, however, you require 5V PWM signals, there is a convenient switch for this on the carrier board. The switch is located on the right side of the board and is labeled “3V PWM” and “5V PWM”. Use a pen or a sharp tool to slide the switch to the desired voltage.
 
 ### Aux Pins
-Additionally, the six “Aux Out” connections are available as part of a 3x8 group of headers on the right side of the board. Refer to the labels in white ink to identify each pin. By default, the board does not supply power to the center pins of the Aux channels. If desired, the board can supply 5.3V to the Aux rail by bridging the pads of JP2 with solder. **If JP2 is bridged with solder, do not connect an external power supply to the Aux pins.**
+Additionally, the six “Aux Out” connections are available as part of a 3x8 group of headers on the right side of the board. Refer to the labels in white ink to identify each pin. By default, the board does not supply power to the center pins of the Aux channels. An external power supply connected to these pins will supply all of the Aux pins, but will be isolated from the rest of the board. If desired, the board can supply 5.3V to the Aux rail by bridging the pads of JP2 with solder. It is recommended to only use on-board power for low-noise and low-power devices. It is not recommended to use servo motors with on-board power. **If JP2 is bridged with solder, do not connect an external power supply to the Aux pins.** 
 
 <p align="center">
     <img src="/assets/images/JP2Bridge.png" class="img-responsive" style="max-width:800px"  />
@@ -364,7 +364,7 @@ In order to use the BATT2_Volt_Sense pin, a user-selected resistor must be solde
 <center>
 	<a href="https://www.codecogs.com/eqnedit.php?latex=R&space;=&space;3030&space;*&space;V_{max}-10000" target="_blank"><img src="https://latex.codecogs.com/gif.latex?R&space;=&space;3030&space;*&space;V_{max}-10000" title="R = 3030 * V_{max}-10000" /></a>
 </center>
-
+  
 
 Where Vmax is the maximum voltage expected on this pin. R will be the resistance in Ohms. Once this value is calculated, a common through hole style resistor should soldered to the space labeled R46 on the bottom surface of the board.
 
@@ -424,6 +424,11 @@ The carrier board features a volume control switch located at the front edge of 
 
 # Mechanical Information
 
+### Mass
+
+79g without Cube
+108g with Cube
+
 ### Outer Dimensions
 <p align="center">
     <img src="/assets/images/carrier_board_dimensions.png" class="img-responsive" style="max-width:800px"  />
@@ -436,9 +441,6 @@ The carrier board features a volume control switch located at the front edge of 
 </p>
 
 # Errata
-Version 1.3 of the SpektreWorks Carrier Board has a trim potentiometer labeled R14 with a large “VADJ” printed next to it. This trim pot was originally intended to adjust the voltage of the regulator. However, it is not recommended that the voltage be adjusted on this version of the board. 
-
-The Connector J19 is labeled on the board as “VPLD 12-24V”. Instead, this should read “VPLD 12V”.
 
 # Disclaimer
 
