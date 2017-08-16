@@ -2,7 +2,7 @@
 layout: default
 title: Multirotor Carrier Board
 order: 0
-permalink: /carrier_board_v1_3_1
+permalink: /carrier_board_v1_3_1/
 nav:
 - Introduction: introduction
 - - Features At-A-Glance: features-at-a-glance
