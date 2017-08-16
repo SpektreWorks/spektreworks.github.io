@@ -115,6 +115,10 @@ By default, the board does not supply power to the ESC PWM connections. However,
 
 Most commercially available ESCs expect 3.3V PWM signals from the autopilot to control the motor. This is the default setting of a Pixhawk Cube. If, however, you require 5V PWM signals, there is a convenient switch for this on the carrier board. The switch is located on the right side of the board and is labeled “3V PWM” and “5V PWM”. Use a pen or a sharp tool to slide the switch to the desired voltage.
 
+<p align="center">
+    <img src="/assets/images/PWM_voltage_switch.png" class="img-responsive" style="max-width:800px"  />
+</p>
+
 ### Aux Pins
 Additionally, the six “Aux Out” connections are available as part of a 3x8 group of headers on the right side of the board. Refer to the labels in white ink to identify each pin. By default, the board does not supply power to the center pins of the Aux channels. An external power supply connected to these pins will supply all of the Aux pins, but will be isolated from the rest of the board. If desired, the board can supply 5.3V to the Aux rail by bridging the pads of JP2 with solder. It is recommended to only use on-board power for low-noise and low-power devices. It is not recommended to use servo motors with on-board power. **If JP2 is bridged with solder, do not connect an external power supply to the Aux pins.** 
 
