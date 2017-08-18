@@ -1,4 +1,5 @@
 ---
+redirect_from: "/carrier_board/"
 layout: default
 title: Multirotor Carrier Board
 order: 0

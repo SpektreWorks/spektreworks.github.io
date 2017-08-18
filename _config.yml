@@ -1,2 +1,4 @@
 repository: spektreworks/spektreworks.github.io
 
+plugins:
+  - jekyll-redirect-from
