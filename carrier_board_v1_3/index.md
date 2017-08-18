@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Multirotor Carrier Board
+title: Multirotor Carrier Board v1.3
 order: 0
 permalink: /carrier_board_v1_3/
 nav:
