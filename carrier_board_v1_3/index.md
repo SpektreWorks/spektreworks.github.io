@@ -168,7 +168,7 @@ The following procedure may be used to configure the board for a hexacopter:
 	* SERVO1_FUNCTION=37
 	* SERVO2_FUNCTION=38
 	* SERVO3_FUNCTION=35
-	* SERV04_FUNCTION=36
+	* SERVO4_FUNCTION=36
 	* SERVO5_FUNCTION=34
 	* SERVO6_FUNCTION=33
 	* You may either type in these parameters manually, or download this <a href="/assets/params/Multirotor_PCB_HEX.param" download> parameter file </a> and upload via mission planner. After inputting via either method, be sure to click "Write Params" to save the parameters in the Cube.
@@ -177,9 +177,9 @@ The following procedure may be used to configure the board for a hexacopter:
 	
 	| Motor Number | Output |
 	|---|-------|
-	| 1 | MAIN3 |
+	| 1 | MAIN6 |
 	| 2 | MAIN5 |
-	| 3 | MAIN6 |
+	| 3 | MAIN3 |
 	| 4 | MAIN4 |
 	| 5 | MAIN1 |
 	| 6 | MAIN2 |
