@@ -448,6 +448,7 @@ The carrier board features a volume control switch located at the front edge of 
 </p>
 
 # Errata
+The pins on connector J3 should be labeled "SCL1" and "SDA1", not "SCL2" and "SDA2". The label "I2C1" next to the connector is correct.
 
 # Disclaimer
 
