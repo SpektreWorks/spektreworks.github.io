@@ -451,6 +451,8 @@ Version 1.3 of the SpektreWorks Carrier Board has a trim potentiometer labeled R
 
 The Connector J19 is labeled on the board as “VPLD 12-24V”. Instead, this should read “VPLD 12V”.
 
+The pins on connector J3 should be labeled "SCL1" and "SDA1", not "SCL2" and "SDA2". The label "I2C1" next to the connector is correct.
+
 # Disclaimer
 
 Due to the complex nature of any drone vehicle, there are many causes of failure that may result in damaged components. SpektreWorks cannot warranty the carrier board against damage caused by external devices (ESCs, motors, peripherals, etc.) or due to a crash. SpektreWorks will replace a carrier board that has a manufacturer defect within 30 days of purchase.
