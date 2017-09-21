@@ -97,7 +97,9 @@ There are three general use payload power connectors to source power for externa
 | J14       | 5.3V            | 1.5A        | 1-2: 5.3V, 3-4: GND    | Molex 5023800400  |
 | J19      	| 12.2V	          | 2A	        | 1-2: 12.2V, 3-5: GND   | Molex 5023800500  |
 
-All three general use power connectors are independently fused with resettable fuses. If a short occurs, the fuse will cut power to the offending connector. If this occurs, identify the short and remove it. Wait a couple of minutes and the fuse should reset. **The fuses may not react instantly and damage may occur to your carrier board if an external device has a short.** SpektreWorks is not responsible for damage caused by an external device.
+The battery voltage and 5.3V power connectors are independently fused with resettable fuses. If a short occurs, the fuse will cut power to the offending connector. If this occurs, identify the short and remove it. Wait a couple of minutes and the fuse should reset. **The fuses may not react instantly and damage may occur to your carrier board if an external device has a short.** SpektreWorks is not responsible for damage caused by an external device.
+
+The 12.2V power connector is **not** internally fused. It is highly recommended that the user fuse any external loads to prevent excessive current from damaging the carrier board.
 
 ### ESC Connections
 At each corner of the board are solder pads for ESC power. The power wires from your ESCs may be soldered to the pads on the top or bottom surface.
