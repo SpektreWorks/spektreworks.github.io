@@ -83,7 +83,7 @@ In order to accurately read the voltage and current using the built-in sensors o
 To set these parameters in mission planner, navigate to the **Config/Tuning -> Full Parameter List** Page. 
 * **Note:** If you are using a fresh installation of mission planner you will have to enable this page by setting **Config/Tuning->Planner->Layout** to **"Advanced"**
 
-You may either type in these parameters manually, or download this <a href="/assets/params/Multirotor_PCB_POWER.param" download> parameter file </a> and upload via mission planner. After inputting via either method, be sure to click "Write Params" to save the parameters in the Cube.
+You may either type in these parameters manually, or download this <a href="/assets/params/Multirotor_PCB_Power.param" download> parameter file </a> and upload via mission planner. After inputting via either method, be sure to click "Write Params" to save the parameters in the Cube.
 
 
 ### General Use Payload Power Connectors
