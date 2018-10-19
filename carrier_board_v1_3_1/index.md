@@ -396,7 +396,7 @@ Connector is JST brand and mates with SHR-06V-S-B or SHR-06V-S
 
 |    Name      |    Label    |    Pins              |
 |--------------|-------------|----------------------|
-| SER5/FMU DBG |    J5       |    1. 3.3V           |
+| SER5/FMU DBG |    J20      |    1. 3.3V           |
 |              |             |    2. Serial 5 TX    |
 |              |             |    3. Serial 5 RX    |
 |              |             |    4. FMU-SWDIO      |
