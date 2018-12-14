@@ -20,7 +20,7 @@ product documentation.
 
 ## Products
 
-[Multirotor Carrier Board v1.3.1](/carrier_board_v1_3_1/)
+[Multirotor Carrier Board v1.3.1 and newer](/carrier_board_v1_3_1/)
 
 ## Previous Versions
 
