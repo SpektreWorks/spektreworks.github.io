@@ -1,7 +1,7 @@
 ---
 redirect_from: "/carrier_board/"
 layout: default
-title: Multirotor Carrier Board v1.3.1 and Newer
+title: Kore Multirotor Carrier Board v1.3.1 and Newer
 order: 0
 permalink: /carrier_board_v1_3_1/
 nav:
@@ -39,11 +39,11 @@ nav:
 ---
 
 <p align="center">
-    <img src="/assets/images/AngleFoamTop.jpg" class="img-responsive" style="max-width:500px"  />
+    <img src="/assets/images/thekore.jpg" class="img-responsive" style="max-width:420px"  />
 </p>
 
 # Introduction
-The primary purpose of the SpektreWorks Multi-Rotor Carrier Board for the Pixhawk Cube is to reduce the rat’s nest of wires and modules typically associated with a multi-rotor assembly. It provides built-in power distribution, redundant power supplies for the autopilot, built-in fail-over power selection, a separate payload power regulator, and many other features.
+The primary purpose of the Kore Multi-Rotor Carrier Board for the Pixhawk Cube is to reduce the rat’s nest of wires and modules typically associated with a multi-rotor assembly. It provides built-in power distribution, redundant power supplies for the autopilot, built-in fail-over power selection, a separate payload power regulator, and many other features.
 
 While this carrier board is geometrically optimized for quadcopters, X8 configurations, and octocopters, it provides connections for every function of the Pixhawk autopilot. Therefore, this board can be integrated into any vehicle type that is supported by the Pixhawk Cube, including all other multi-rotor frame types, plane, rover, sub, and antenna tracker.
  
