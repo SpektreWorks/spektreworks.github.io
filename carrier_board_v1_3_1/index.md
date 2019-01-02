@@ -39,7 +39,7 @@ nav:
 ---
 
 <p align="center">
-    <img src="/assets/images/thekore.jpg" class="img-responsive" style="max-width:420px"  />
+    <img src="/assets/images/thekore.jpg" class="img-responsive" style="max-width:850px"  />
 </p>
 
 # Introduction
