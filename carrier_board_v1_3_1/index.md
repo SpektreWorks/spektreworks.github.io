@@ -1,7 +1,7 @@
 ---
 redirect_from: "/carrier_board/"
 layout: default
-title: Kore Multirotor Carrier Board v1.3.1 and Newer
+title: Kore v1.3.1 and Newer
 order: 0
 permalink: /carrier_board_v1_3_1/
 nav:
