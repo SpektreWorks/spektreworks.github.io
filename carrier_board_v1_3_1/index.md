@@ -74,7 +74,7 @@ In order to accurately read the voltage and current using the built-in sensors o
 
 |    Parameter           |    Value    |
 |------------------------|-------------|
-|    BATT_AMP_OFFSET     |    0.45     |
+|    BATT_AMP_OFFSET     |    0.38     |
 |    BATT_AMP_PERVOLT    |    69       |
 |    BATT_CURR_PIN       |    3        |
 |    BATT_MONITOR        |    4        |
