@@ -72,14 +72,14 @@ The power distribution system is rated to supply 140A to the ESCs when exposed t
 
 In order to accurately read the voltage and current using the built-in sensors on the board, the following parameters should be set in the Pixhawk Cube:
 
-|    Parameter           |    Value    |
-|------------------------|-------------|
-|    BATT_AMP_OFFSET     |    0.38     |
-|    BATT_AMP_PERVOLT    |    69       |
-|    BATT_CURR_PIN       |    3        |
-|    BATT_MONITOR        |    4        |
-|    BATT_VOLT_MULT      |    15.3     |
-|    BATT_VOLT_PIN       |    2        |
+|    Parameter           | Value (Cube Black, Blue) | Value (Cube Orange, OrangePlus Blue H7) |
+|------------------------|--------------------------|-----------------------------------------|
+|    BATT_AMP_OFFSET     |    0.38     | 0.38 |
+|    BATT_AMP_PERVOLT    |    69       |   69 |
+|    BATT_CURR_PIN       |    3        |   15 |
+|    BATT_MONITOR        |    4        |    4 |
+|    BATT_VOLT_MULT      |    15.3     | 15.3 |
+|    BATT_VOLT_PIN       |    2        |   14 |
 
 To set these parameters in mission planner, navigate to the **Config/Tuning -> Full Parameter List** Page. 
 * **Note:** If you are using a fresh installation of mission planner you will have to enable this page by setting **Config/Tuning->Planner->Layout** to **"Advanced"**
